@@ -1,3 +1,9 @@
+# P2: Concurrent Processing & Shared Resources
+## STREAMING DATA 44671-80/81FA23
+### Kristen Finley
+### Assignment 2
+
+
 # streaming-02-multiple-processes
 
 > Multiple processes accessing a shared resource concurrently
