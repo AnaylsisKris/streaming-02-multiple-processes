@@ -40,13 +40,47 @@ Read the output. Read the code.
 Try to figure out what's going on. 
 
 1. What libraries did we import?
-1. Where do we set the TASK_DURATION_SECONDS?
-1. How many functions are defined? 
-1. What are the function names? 
-1. In general, what does each function do? 
-1. Where does the execution begin? Hint: generally at the end of the file.
-1. How many processes do we start?
-1. How many records does each process insert?
+- datetime
+- logging
+- multiprocessing
+- os
+- platform
+- sqlite3
+- sys
+- time
+
+2. Where do we set the TASK_DURATION_SECONDS?
+- line 40
+
+3. How many functions are defined?
+-  7
+
+4. What are the function names?
+- recreate_database
+- create_table
+- drop_table
+- insert_pet
+- process_one
+- process_two
+- process_three
+
+5. In general, what does each function do?
+- recreate_database: drops and recreates the database
+- create_table: creates a table in the database
+- drop_table: drops the table if it exists
+- insert_pet: inserts a pet into pets table
+- process_one: defines P1
+- process_two: defines P2
+- process_three: defines P3
+
+6. Where does the execution begin? Hint: generally at the end of the file.
+- line 185
+
+7. How many processes do we start?
+- 3 (p1, p2, and p3)
+
+8. How many records does each process insert?
+- 6 (3x2)
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
@@ -120,13 +154,14 @@ and share them in our discussion.
 Python has pretty helpful error messages. 
 When you get an error, read them carefully. 
 
-- What error do you get?
+- What error do you get? "data base is locked"
 
 ### Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
 
 - What do you learn?
+"If you are encountering the “SQLite database is locked” error, it means that the database you are trying to access is already in use by some other process. This can be caused by a number of different reasons, but the most common cause is that another connection to the database has not been properly closed."
 - Once a process fails, it crashes the main process and everything stops. 
 
 ### Deadlock

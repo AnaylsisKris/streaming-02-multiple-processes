@@ -1,7 +1,29 @@
-In the console, type clear and hit Enter or Return. 
+/usr/local/bin/python3 /Users/kristenfinley/Documents/streaming-02-multiple-processes/multiple_processes.py
+(base) kristenfinley@Kristens-MacBook-Pro streaming-02-multiple-processes % /usr/local/bin/python3 /Users/kristenfinley/Documents/streaming-02-multiple-processes/multiple_
+processes.py
+2023-08-30 16:14:42,397 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-08-30 at 04:14 PM
+  Operating System: posix Darwin 22.5.0
+  Python Version:   3.11.1
+  Path to Interpreter:  /usr/local/bin/python3
+======================================================================
 
-This will clear the console output. 
-
-Run the file once while the tasks are longer. 
-
-Copy and paste the terminal results (when task_duration is 3) here.
+2023-08-30 16:14:42,397 - INFO - Called recreate_database().
+2023-08-30 16:14:42,397 - INFO - Called drop_table().
+2023-08-30 16:14:42,398 - INFO - Table 'pets' dropped successfully.
+2023-08-30 16:14:42,398 - INFO - Called create_table().
+2023-08-30 16:14:42,399 - INFO - Table 'pets' created successfully.
+2023-08-30 16:14:42,436 - INFO - Called process_one().
+2023-08-30 16:14:42,436 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-08-30 16:14:42,436 - INFO - Called process_two().
+2023-08-30 16:14:42,436 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-08-30 16:14:42,436 - INFO - Called process_three().
+2023-08-30 16:14:42,436 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-08-30 16:14:45,440 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-08-30 16:14:47,639 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2023-08-30 16:14:47,639 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2023-08-30 16:14:47,642 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2023-08-30 16:14:47,642 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+(base) kristenfinley@Kristens-MacBook-Pro streaming-02-multiple-processes % 
